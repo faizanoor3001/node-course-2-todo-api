@@ -7,6 +7,15 @@ var {User} = require('./models/user');
 
 // store express application
 var app = express();
+// Steps to deploy on heroku
+// Step 1: defined below line to deploy to heroku , the property value process.env.PORT will be replaced if running on heroku
+const port = process.env.PORT || 3000;
+
+// Step 2:
+//define a start script in package.json --> "start" : "node server/server.js"
+
+//Step 3:
+
 
 app.use(bodyParser.json());
 
@@ -51,8 +60,8 @@ app.get('/todos/:id', (req, res) => {
         });
 });
 
-app.listen(3000, () => {
-  console.log('Started on port 3000');
+app.listen(port, () => {
+  console.log(`Started on port ${port}`);
 });
 
 module.exports = {app};
