@@ -65,3 +65,5 @@ app.listen(port, () => {
 });
 
 module.exports = {app};
+
+// mongodb_uri = mongodb://faizanoor3001:Job78618!@ds149894.mlab.com:49894/mongodbmlab
